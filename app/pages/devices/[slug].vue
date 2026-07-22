@@ -7,6 +7,12 @@ const route = useRoute()
 const slug = computed(() => String(route.params.slug || ''))
 const imageSrc = ref('')
 
+const badgeLabelMap = {
+  top: 'Top',
+  new: 'New',
+  sale: 'Sale',
+} as const
+
 const { data: device, error } = await useAsyncData<Device>(
   `device-${slug.value}`,
   () => $fetch(`/api/devices/${slug.value}`)
@@ -23,6 +29,12 @@ if (error.value) {
 const title = computed(() =>
   device.value ? `${device.value.brand} ${device.value.model}` : 'Device'
 )
+
+const badgeLabel = computed(() => {
+  if (!device.value?.badge) return null
+
+  return badgeLabelMap[device.value.badge]
+})
 
 watchEffect(() => {
   imageSrc.value = device.value?.image || '/img/device-placeholder.webp'
@@ -64,7 +76,7 @@ useSeoMeta({
             v-if="device.badge"
             :class="styles['device-page__badge']"
           >
-            {{ device.badge }}
+            {{ badgeLabel }}
           </span>
 
           <img

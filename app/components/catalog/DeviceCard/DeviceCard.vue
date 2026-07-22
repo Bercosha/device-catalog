@@ -74,15 +74,15 @@ const badgeLabelMap = {
 
         <div :class="styles['device-card__bottom']">
           <div :class="styles['device-card__price-box']">
-            <span :class="styles['device-card__price']">
-              {{ device.priceMDL.toLocaleString('en-US') }} MDL
-            </span>
-
             <span
               v-if="device.oldPriceMDL"
               :class="styles['device-card__old-price']"
             >
               {{ device.oldPriceMDL.toLocaleString('en-US') }} MDL
+            </span>
+
+            <span :class="styles['device-card__price']">
+              {{ device.priceMDL.toLocaleString('en-US') }} MDL
             </span>
           </div>
 

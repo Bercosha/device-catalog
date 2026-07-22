@@ -91,15 +91,3 @@
   gap: 12px;
   margin: 0 0 20px;
 }
-
-.catalog-page__updating {
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--color-primary);
-}
-
-.catalog-page__grid--updating {
-  opacity: 0.65;
-  pointer-events: none;
-  transition: opacity 0.16s ease;
-}

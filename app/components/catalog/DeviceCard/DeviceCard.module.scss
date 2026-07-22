@@ -50,13 +50,14 @@
   z-index: 1;
   top: 18px;
   left: 18px;
-  padding: 6px 10px;
-  font-size: 0.75rem;
-  font-weight: 800;
+  padding: 8px 13px;
+  font-size: 0.8125rem;
+  font-weight: 900;
   line-height: 1;
   color: var(--color-bg);
+  text-transform: capitalize;
   background: var(--color-primary);
-  border-radius: var(--radius-md);
+  border-radius: 12px;
 }
 
 .device-card__image {
@@ -126,17 +127,21 @@
 
 .device-card__price-box {
   display: grid;
-  gap: 4px;
+  align-content: end;
+  gap: 3px;
+  min-height: 44px;
 }
 
 .device-card__price {
   font-size: 1.125rem;
-  font-weight: 800;
+  font-weight: 900;
+  line-height: 1.15;
   color: var(--color-text);
 }
 
 .device-card__old-price {
   font-size: 0.875rem;
+  line-height: 1.1;
   color: var(--color-muted);
   text-decoration: line-through;
 }

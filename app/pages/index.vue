@@ -92,19 +92,9 @@ useSeoMeta({
           <p :class="styles['catalog-page__results']">
             Showing {{ data.items.length }} of {{ data.total }} devices
           </p>
-
-          <span
-            v-if="pending"
-            :class="styles['catalog-page__updating']"
-          >
-            Updating...
-          </span>
         </div>
 
-        <DeviceGrid
-          :class="[pending && styles['catalog-page__grid--updating']]"
-          :items="data.items"
-        />
+        <DeviceGrid :items="data.items" />
 
         <Pagination
           :page="data.page"

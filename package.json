@@ -7,15 +7,16 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "nuxt": "^4.5.0",
-    "sass": "^1.101.3",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "typescript": "^7.0.2",
+    "sass": "^1.101.3",
+    "typescript": "^5.9.3",
     "vue-tsc": "^3.3.7"
   }
 }
