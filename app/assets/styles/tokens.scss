@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-text: #1f1f29;
+  --color-muted: #6f6f7a;
+  --color-primary: #7b2cff;
+  --color-border: #e6e2ee;
+  --radius-card: 20px;
+}
+
+[data-theme='dark'] {
+  --color-bg: #121217;
+  --color-surface: #1c1c24;
+  --color-text: #f5f3ff;
+  --color-muted: #b9b3c9;
+  --color-primary: #b78cff;
+  --color-border: #32303d;
+}
